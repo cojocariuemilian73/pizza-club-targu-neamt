@@ -1,0 +1,36 @@
+/* Meniul de pe mese: o pagină scurtă, citită pe telefon, cu o mână. */
+html { scroll-padding-top: 76px; }
+.qm { --gut: clamp(18px, 5vw, 32px); padding-bottom: env(safe-area-inset-bottom); }
+.qm-head { position: relative; display: grid; align-items: end; min-height: 46svh; padding: 22px var(--gut) 28px; color: var(--cream); overflow: hidden; }
+.qm-cover { position: absolute; inset: 0; z-index: -1; }
+.qm-cover picture, .qm-cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.qm-cover::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, var(--paper) 0%, #1f1612cc 38%, #1f161233 100%); }
+.qm-head-copy { display: grid; gap: 10px; max-width: 640px; margin-inline: auto; width: 100%; }
+.qm-head .wordmark { position: absolute; top: 20px; left: var(--gut); color: var(--cream); }
+.qm-head h1 { font-size: var(--fs-2xl); line-height: .9; letter-spacing: -.02em; }
+.qm-head p { color: color-mix(in oklab, var(--cream) 72%, transparent); font-size: var(--fs-xs); }
+
+.qm-nav { position: sticky; top: 0; z-index: 3; display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 12px var(--gut); background: color-mix(in oklab, var(--paper) 88%, transparent); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.qm-nav::-webkit-scrollbar { display: none; }
+.qm-chip { flex: none; padding: 9px 16px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: var(--fs-xs); font-weight: 600; transition: color .2s var(--ease-out), background-color .2s var(--ease-out), border-color .2s var(--ease-out); }
+.qm-chip[aria-current] { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+
+.qm-main { max-width: 640px; margin-inline: auto; padding: 8px var(--gut) 24px; }
+.qm-section { padding-top: 34px; }
+.qm-section h2 { margin-bottom: 6px; font-size: var(--fs-xl); line-height: 1; }
+.qm-list { display: grid; }
+.qm-item { display: grid; grid-template-columns: 76px 1fr auto; gap: 4px 16px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.qm-item:last-child { border-bottom: 0; }
+.qm-thumb { grid-row: span 2; width: 76px; height: 76px; overflow: hidden; border-radius: 12px; background: color-mix(in oklab, var(--accent) 22%, var(--paper)); }
+.qm-thumb picture, .qm-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.qm-thumb.is-letter { display: grid; place-items: center; font: italic 600 var(--fs-lg)/1 var(--serif); color: color-mix(in oklab, var(--ink) 85%, var(--accent)); }
+.qm-item h3 { align-self: end; font-size: var(--fs-md); line-height: 1.1; }
+.qm-item .price { align-self: end; color: var(--oak); font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.qm-item p { grid-column: 2 / -1; align-self: start; color: var(--muted); font-size: var(--fs-xs); line-height: 1.45; }
+.qm-fav { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 999px; color: var(--espresso); background: var(--oak); font: 700 var(--fs-xs)/1.6 var(--sans); letter-spacing: .1em; text-transform: uppercase; vertical-align: middle; }
+
+.qm-foot { display: grid; justify-items: start; gap: 14px; max-width: 640px; margin: 24px auto 0; padding: 36px var(--gut) 56px; border-top: 1px solid var(--line); }
+.qm-foot-title { font: 600 var(--fs-lg)/1 var(--serif); }
+.qm-foot p:not(.qm-foot-title) { color: var(--muted); }
+.qm-foot .text-link { margin-top: 6px; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .qm-chip { transition: none; } }

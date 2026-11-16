@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cojocariuemilian73.github.io/pizza-club-targu-neamt/sitemap.xml

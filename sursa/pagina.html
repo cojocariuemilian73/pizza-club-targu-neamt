@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <script>document.documentElement.classList.add("js")</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <meta name="theme-color" content="{{themeColor}}">
+  <meta name="color-scheme" content="{{colorScheme}}">
+  <meta name="darkreader-lock">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:image" content="{{shareUrl}}">
+  <meta property="og:image:width" content="{{shareWidth}}">
+  <meta property="og:image:height" content="{{shareHeight}}">
+  <meta property="og:image:alt" content="{{shareAlt}}">
+  <meta name="twitter:card" content="summary_large_image">
+  {{canonical}}
+  <link rel="icon" href="{{favicon}}" type="image/png" sizes="64x64">
+  <link rel="preload" as="image" imagesrcset="{{heroMobileAvif}}" imagesizes="100vw" type="image/avif" media="(max-width: 640px)">
+  <link rel="preload" as="image" imagesrcset="{{heroDesktopAvif}}" imagesizes="100vw" type="image/avif" media="(min-width: 641px)">
+  <link rel="preload" href="assets/fonts/cormorant-ro.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css?v={{vCss}}">
+  {{extraHead}}
+  {{orderHead}}
+  {{themeHead}}
+  <script id="program-dorohoi" type="application/json">{{schedule}}</script>
+  <script defer src="assets/js/main.js?v={{vJs}}" data-motion="assets/js/motion.js?v={{vMotion}}"></script>
+</head>
+<body id="sus">
+  <a class="skip-link" href="#continut">Sari la conținut</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="#sus">{{logo}}</a>
+      <button type="button" class="nav-toggle" aria-haspopup="dialog" aria-controls="navigatie-mobila" hidden>Meniu <span aria-hidden="true"></span></button>
+      <nav class="desktop-nav" aria-label="Navigare principală">{{navigation}}</nav>
+    </div>
+  </header>
+  <dialog class="mobile-nav" id="navigatie-mobila" aria-label="Navigare mobilă">
+    <div class="mobile-nav-head">
+      <span class="wordmark" aria-hidden="true">{{logo}}</span>
+      <form method="dialog"><button class="close-button" aria-label="Închide meniul" autofocus>×</button></form>
+    </div>
+    <nav aria-label="Navigare principală">{{navigation}}</nav>
+    <a class="button button-dark" href="{{directionsD}}">Cum ajungi <span aria-hidden="true">↗</span></a>
+  </dialog>
+
+  <main id="continut" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-main">
+        <div class="hero-media">
+          <picture class="hero-photo">
+            <source media="(max-width: 640px)" type="image/avif" srcset="{{heroMobileAvif}}" sizes="100vw" width="{{heroMobileWidth}}" height="{{heroMobileHeight}}">
+            <source media="(max-width: 640px)" type="image/webp" srcset="{{heroMobileSet}}" sizes="100vw" width="{{heroMobileWidth}}" height="{{heroMobileHeight}}">
+            {{heroImage}}
+          </picture>
+        </div>
+        <div class="hero-copy">
+          <p class="preview-kicker">Pizza Club</p>
+          <h1 id="hero-title" data-keys="{{heroKeys}}">{{heroTitle}}</h1>
+          <div class="hero-actions">
+            <a class="button button-ghost" href="#meniu">Vezi meniul {{arrowDown}}</a>
+            <a class="button button-ghost" href="{{tel}}">Sună la restaurant</a>
+          </div>
+        </div>
+        <p class="preview-mark">Concept de site · fotografii ilustrative</p>
+      </div>
+    </section>
+
+    {{extraAfterMenu}}
+
+    <section class="section menu-section" id="meniu" aria-labelledby="menu-title">
+      <div class="shell">
+        <div class="section-intro">
+          <h2 id="menu-title">{{menuTitle}}</h2>
+          <p class="preview-menu-note">Selecție din oferta publicată. Sortimentele și prețurile se confirmă la telefon. <a href="{{tel}}">Sună la restaurant</a>.</p>
+        </div>
+        {{menuBoard}}
+        <p class="preview-qr-link"><a class="button button-outline" href="meniu.html">Meniu pentru telefon {{arrowOut}}</a></p>
+      </div>
+    </section>
+
+
+    <section class="section wood" id="atelier" aria-labelledby="wood-title">
+      <div class="wood-pin">
+        {{woodWindow}}
+        <div class="shell wood-layout">
+          <div class="wood-head">
+            <h2 id="wood-title">{{galleryTitle}}</h2>
+            <p>{{galleryText}}</p>
+          </div>
+          <div class="wood-rail" role="region" aria-label="Galerie de imagini ilustrative, derulează spre dreapta" tabindex="0">
+            <ul class="wood-strip">{{woodImages}}</ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{extraOffers}}
+
+    <section class="section reviews" id="recenzii" aria-labelledby="reviews-title">
+      <div class="shell">
+        <div class="section-intro reviews-intro">
+          <h2 id="reviews-title">{{reviewsTitle}}</h2>
+          <div class="reviews-side">
+            {{reviewsRating}}
+            <a class="button button-dark" href="{{writeReview}}">Lasă și tu o recenzie {{arrowOut}}</a>
+            <div class="reviews-nav" hidden>
+              <button type="button" class="reviews-prev" aria-label="Recenzia anterioară" aria-controls="reviews-track">{{arrowLeft}}</button>
+              <button type="button" class="reviews-next" aria-label="Recenzia următoare" aria-controls="reviews-track">{{arrowRight}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-track" id="reviews-track" role="region" aria-label="Recenzii, derulează spre dreapta" tabindex="0" data-lenis-prevent-wheel>{{reviews}}</div>
+    </section>
+
+    <section class="section locations" id="locatii" aria-labelledby="locations-title">
+      <div class="shell">
+        <div class="section-intro">
+          <h2 id="locations-title">{{locationsTitle}}</h2>
+        </div>
+        <div class="locations-grid">{{locationCards}}</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="wordmark" href="#sus">{{logo}}</a>
+          <p>{{footerText}}</p>
+          {{socialLink}}
+        </div>
+        <div>
+          <h2 class="eyebrow">Treci pe la noi</h2>
+          <address><a href="{{directionsD}}">{{addressD}}, {{cityD}} <span aria-hidden="true">↗</span></a></address>
+          <p>{{scheduleLabelD}}</p>
+        </div>
+        <div>
+          <h2 class="eyebrow">Telefonul restaurantului</h2>
+          <a class="footer-phone" href="{{tel}}">{{phone}}</a>
+          {{contactLinks}}
+        </div>
+      </div>
+      <div class="footer-base"><p>Prezentare neoficială · {{brand}}</p>{{photoCredits}}<p class="preview-source"><a href="https://www.restaurants10.com/RO/T%C3%A2rgu-Neam%C8%9B/741867215902001/Pizza-Club-Tg-Neamt">Postări și număr de livrări</a> · <a href="https://toprestaurante.ro/restaurant/pizza-club-targu-neamt">Punctul de lucru Mărășești</a> · <a href="https://www.pexels.com/license/">Licența fotografiilor</a></p><a href="#sus">Înapoi sus <span aria-hidden="true">↑</span></a></div>
+    </div>
+  </footer>
+
+  <div class="mobile-actions" aria-label="Acțiuni rapide">
+    <a href="{{tel}}">Sună</a>
+    <a href="{{directionsD}}">Direcții <span aria-hidden="true">↗</span></a>
+  </div>
+
+  {{extraModal}}
+  {{extraScripts}}
+  {{orderScripts}}
+</body>
+</html>

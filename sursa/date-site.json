@@ -1,0 +1,190 @@
+{
+  "brand": "Pizza Club",
+  "description": "Pizza Club Târgu Neamț, pizzerie cu pizza la felie și comenzi telefonice. Vezi punctele de lucru și contactul.",
+  "publicUrl": "https://cojocariuemilian73.github.io/pizza-club-targu-neamt/",
+  "atelier": "",
+  "deschidere": "",
+  "linkuri": {
+    "recenzii": "",
+    "harta": "",
+    "instagram": "",
+    "facebook": "https://www.facebook.com/pizzaclubtgneamt/",
+    "email": "",
+    "whatsapp": "",
+    "scrieRecenzie": ""
+  },
+  "video": {
+    "youtube": "",
+    "titlu": "",
+    "credit": ""
+  },
+  "meniuExemplu": true,
+  "meniu": [
+    {
+      "id": "pizza",
+      "nume": "Pizza",
+      "produse": [
+        {
+          "nume": "Pizza la felie",
+          "descriere": "Întreabă la vitrină ce sortimente sunt disponibile în ziua vizitei.",
+          "pret": null,
+          "imagine": "pizza"
+        },
+        {
+          "nume": "Pizza pentru livrare",
+          "descriere": "Sună pentru sortimente, mărimi, prețuri și adresa la care se poate livra.",
+          "pret": null,
+          "imagine": "pickup"
+        }
+      ]
+    }
+  ],
+  "evaluareGoogle": {},
+  "recenzii": [],
+  "fotografiiIlustrative": true,
+  "eticheteIlustrative": false,
+  "surseFoto": [
+    {
+      "nume": "Pexels 1",
+      "url": "https://www.pexels.com/photo/12932266/"
+    },
+    {
+      "nume": "Pexels 2",
+      "url": "https://www.pexels.com/photo/20117231/"
+    },
+    {
+      "nume": "Pexels 3",
+      "url": "https://www.pexels.com/photo/7886609/"
+    },
+    {
+      "nume": "Pexels 4",
+      "url": "https://www.pexels.com/photo/34775818/"
+    }
+  ],
+  "imagini": {
+    "share": {
+      "fisier": "share.jpg",
+      "latime": 1200,
+      "inaltime": 630,
+      "alt": "Pizza cu salam și ierburi pe o masă din lemn",
+      "ilustrativa": true
+    },
+    "hero": {
+      "fisier": "hero.webp",
+      "latime": 1800,
+      "inaltime": 1080,
+      "alt": "Pizza cu salam și ierburi pe o masă din lemn",
+      "ilustrativa": true,
+      "mobil": "hero-mobil.webp",
+      "latimeMobil": 780,
+      "inaltimeMobil": 1040
+    },
+    "pizza": {
+      "fisier": "pizza.webp",
+      "latime": 1024,
+      "inaltime": 760,
+      "alt": "Pizza cu mozzarella și busuioc",
+      "ilustrativa": true
+    },
+    "pickup": {
+      "fisier": "pickup.webp",
+      "latime": 1024,
+      "inaltime": 760,
+      "alt": "Pizza în cutii pentru ridicare",
+      "ilustrativa": true
+    },
+    "oven": {
+      "fisier": "oven.webp",
+      "latime": 1024,
+      "inaltime": 760,
+      "alt": "Pizza cu busuioc, așezată pe o masă de lemn",
+      "ilustrativa": true
+    }
+  },
+  "extra": {
+    "activ": false
+  },
+  "locatii": [
+    {
+      "oras": "Târgu Neamț",
+      "judet": "Neamț",
+      "adresa": "Strada Petru Rareș 4",
+      "telefon": "+40 751 372 563",
+      "cautareHarta": "Strada Petru Rareș 4, Târgu Neamț",
+      "reper": "",
+      "program": [],
+      "latitudine": null,
+      "longitudine": null,
+      "nume": "Pizza Club Caffe"
+    },
+    {
+      "oras": "Târgu Neamț",
+      "judet": "Neamț",
+      "adresa": "Strada Mărășești 4",
+      "telefon": "+40 751 372 563",
+      "cautareHarta": "Strada Mărășești 4, Târgu Neamț",
+      "reper": "",
+      "program": [],
+      "latitudine": null,
+      "longitudine": null,
+      "nume": "Pizza Club · Mărășești"
+    }
+  ],
+  "texte": {
+    "titluPagina": "Pizza Club · Pizzerie în Târgu Neamț",
+    "logo": {
+      "mare": "Pizza Club",
+      "mic": "TÂRGU NEAMȚ"
+    },
+    "hero": "Pizza la felie,|în Târgu Neamț.",
+    "heroCuvinteAurii": [],
+    "navGalerie": "Galerie",
+    "poveste": {
+      "titlu": "",
+      "lead": "",
+      "text": "",
+      "imagineMare": "pizza",
+      "imagineMica": "pickup"
+    },
+    "galerie": {
+      "titlu": "Din cuptor|la vitrină.",
+      "text": "Sortimentele se pot vedea în vitrină, pe Petru Rareș. Pentru o comandă sau pentru livrare, sună și întreabă ce este disponibil în ziua aceea.",
+      "imagini": [
+        "pizza",
+        "pickup",
+        "oven"
+      ]
+    },
+    "meniu": "Meniu",
+    "recenzii": "Recenzii",
+    "locatii": "Unde ne găsești.",
+    "subsol": "Pizzerie în Târgu Neamț.",
+    "paginaMeniu": {
+      "titlu": "Meniu · Pizza Club",
+      "descriere": "Pizza Club Târgu Neamț, pizzerie cu pizza la felie și comenzi telefonice. Vezi punctele de lucru și contactul.",
+      "linkPoveste": "Înapoi la site",
+      "imagine": "hero"
+    }
+  },
+  "folderImagini": "assets/img/restaurant/",
+  "filtre": [],
+  "_sursaMeniu": {
+    "valabilitate": "De confirmat cu restaurantul",
+    "surse": [
+      [
+        "Postări și număr de livrări",
+        "https://www.restaurants10.com/RO/T%C3%A2rgu-Neam%C8%9B/741867215902001/Pizza-Club-Tg-Neamt"
+      ],
+      [
+        "Punctul de lucru Mărășești",
+        "https://toprestaurante.ro/restaurant/pizza-club-targu-neamt"
+      ]
+    ]
+  },
+  "comenzi": {},
+  "tema": {
+    "css": "assets/css/tema-site.css",
+    "culoare": "#fff6e7",
+    "schema": "only light"
+  }
+}

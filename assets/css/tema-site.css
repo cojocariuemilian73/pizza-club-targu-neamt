@@ -1,0 +1,55 @@
+:root {
+  color-scheme: light;
+  --paper: #fff6e7;
+  --ink: #34251c;
+  --accent: #a32925;
+  --accent-text: #a32925;
+  --oak: #a32925;
+  --espresso: #491e1a;
+  --cream: #fff8ec;
+  --restaurant-board: #381e1a;
+  --restaurant-highlight: #fae5ce;
+  --radius: 6px;
+}
+body { background: var(--paper); }
+body::after { display: none; }
+.hero { color: var(--cream); }
+.hero-media::after { background: linear-gradient(90deg, #170e0cd9, #170e0c33 76%), linear-gradient(0deg, #160e0dbb, transparent 60%); }
+.hero-copy { max-width: 950px; }
+.hero-copy h1 { line-height: .98; }
+.preview-kicker { margin: 0 0 15px; color: var(--restaurant-highlight); font-size: var(--fs-xs); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.hero-copy:has(h1.is-steam) > :not(h1) { animation-delay: .2s; }
+.preview-mark { position: absolute; z-index: 2; right: var(--edge); bottom: 14px; color: #fff8ec; font-size: var(--fs-xs); }
+.preview-menu-note { color: var(--muted); max-width: 62ch; }
+.preview-menu-note a, .preview-source a { text-decoration: underline; text-underline-offset: .18em; }
+.preview-qr-link { margin-top: 22px; }
+.preview-source { font-size: var(--fs-xs); }
+.chalkboard { background: var(--restaurant-board); border-color: color-mix(in oklab, var(--accent) 65%, var(--restaurant-board)); }
+.chalkboard::before { display: none; }
+.board-item p { color: #fff2e1; }
+.board-item .add-btn { background: var(--restaurant-highlight); color: var(--restaurant-board); }
+.wood-head > p:last-child { color: var(--muted); }
+.wood-layout img { border-radius: var(--radius); }
+.site-footer { background: var(--restaurant-board); color: var(--cream); }
+.site-footer h2 { color: var(--restaurant-highlight); }
+.footer-grid p, .footer-grid address, .contact-links, .footer-base { color: #fff0df; }
+.footer-base { border-color: #fff4; }
+.button-dark { background: var(--accent); color: #fff8ec; }
+.button-dark:hover { background: var(--restaurant-board); color: #fff8ec; }
+.qm-head { color: var(--cream); }
+.qm-main > .preview-menu-note { margin: 24px 0; }
+.qm-foot { color: var(--cream); background: var(--restaurant-board); }
+.qm-foot .preview-source { color: var(--cream); }
+@media (max-width: 640px) {
+  .hero-media::after { background: linear-gradient(0deg, #170e0ce8, #170e0c38 80%), linear-gradient(#170e0c78, transparent 38%); }
+  .hero h1 { font-size: clamp(38px, 11vw, 54px); }
+  .hero-main { padding-bottom: 100px; }
+  .hero-actions .button { font-size: var(--fs-xs); min-height: 44px; padding-inline: 11px; }
+  .preview-mark { right: auto; left: var(--edge); bottom: 53px; }
+  .preview-kicker { max-width: 28ch; }
+}
+
+.js .hero h1:not(.is-steam) { visibility: visible; }
+.chalkboard .board-group h3 { color: var(--restaurant-highlight); transform: none; }
+.chalkboard .doodle { display: none; }
+.board-item p { font: 400 var(--fs-xs)/1.55 var(--sans); letter-spacing: normal; }

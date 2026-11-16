@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Comenzi — {{brand}}</title>
+  <meta name="theme-color" content="{{themeColor}}">
+  <meta name="color-scheme" content="{{colorScheme}}">
+  <meta name="darkreader-lock">
+  <link rel="icon" href="{{favicon}}" type="image/png" sizes="64x64">
+  <link rel="stylesheet" href="assets/css/style.css?v={{vCss}}">
+  <link rel="stylesheet" href="assets/css/comenzi.css?v={{vOrderCss}}">
+  {{themeHead}}
+  <style>
+    body { min-height: 100vh; background: var(--paper); }
+    .panou-wrap { padding: 20px clamp(16px, 3vw, 32px) 40px; }
+    .panou-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; }
+    .panou-top h1 { font: 600 var(--fs-xl)/1 var(--serif); }
+    #panou-stare { color: var(--muted); font-size: var(--fs-xs); }
+    #panou-coloane { display: grid; gap: 16px; }
+    @media (min-width: 900px) { #panou-coloane { grid-template-columns: repeat(3, 1fr); align-items: start; } }
+    .col { display: grid; gap: 12px; }
+    .col h2 { display: flex; justify-content: space-between; padding-bottom: 8px; border-bottom: 1px solid var(--line); font: 600 var(--fs-lg)/1 var(--serif); }
+    .col h2 span { color: var(--accent-text); font-family: var(--sans); font-size: var(--fs-md); }
+    .col-empty { color: var(--muted); font-size: var(--fs-xs); }
+    .ticket { display: grid; gap: 8px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: color-mix(in oklab, var(--ink) 4%, var(--paper)); font-size: var(--fs-sm); }
+    .ticket.is-noua { border-color: var(--accent-text); box-shadow: 0 0 0 1px var(--accent-text); }
+    .ticket header { display: flex; justify-content: space-between; gap: 8px; }
+    .ticket header strong { font-size: var(--fs-md); }
+    .ticket header span, .ticket-addr, .ticket-when { color: var(--muted); font-size: var(--fs-xs); }
+    .ticket-when { color: var(--accent-text); font-weight: 600; }
+    .ticket ul { display: grid; gap: 4px; padding: 0; list-style: none; }
+    .ticket li small { display: block; padding-left: 24px; color: var(--muted); font-size: var(--fs-xs); }
+    .ticket-obs { font-style: italic; }
+    .ticket-total { font-weight: 700; }
+    .ticket-total small { color: var(--muted); font-weight: 400; font-size: var(--fs-xs); }
+    .ticket-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .ticket-actions .button { flex: 1 1 auto; justify-content: center; }
+    #panou-istoric { margin-top: 32px; color: var(--muted); font-size: var(--fs-xs); }
+    #panou-istoric h2 { margin-bottom: 8px; font-size: var(--fs-sm); color: var(--ink); }
+    #panou-istoric ul { display: grid; gap: 4px; padding: 0; list-style: none; }
+    #panou-login { display: grid; gap: 16px; width: min(420px, 100%); margin: 12vh auto 0; padding: 0 16px; }
+    #panou-login h1 { font: 600 var(--fs-xl)/1 var(--serif); }
+    #panou-login[hidden], #panou[hidden], #login-campuri[hidden], #login-demo[hidden] { display: none; }
+    #login-campuri { display: grid; gap: 14px; }
+    #login-eroare { color: #e0614a; font-size: var(--fs-xs); }
+  </style>
+</head>
+<body>
+  <form id="panou-login" novalidate>
+    <a class="wordmark" href="./">{{logo}}</a>
+    <h1>Comenzi</h1>
+    <div id="login-campuri">
+      <label class="field"><span>E-mail</span><input type="email" name="email" autocomplete="username" required></label>
+      <label class="field"><span>Parolă</span><input type="password" name="parola" autocomplete="current-password" required></label>
+    </div>
+    <p id="login-demo" class="order-note">Mod demonstrație: aici apar comenzile trimise de pe {{demoLink}} din acest browser. Deschide site-ul într-un tab alăturat și trimite o comandă.</p>
+    <p id="login-eroare" role="alert"></p>
+    <button class="button button-dark">Pornește panoul (cu sunet)</button>
+  </form>
+
+  <div id="panou" class="panou-wrap" hidden>
+    <div class="panou-top">
+      <h1>Comenzi · {{brand}}</h1>
+      <p id="panou-stare" aria-live="polite"></p>
+      <button type="button" id="panou-iesire" class="button button-outline">Ieși</button>
+    </div>
+    <div id="panou-coloane"></div>
+    <div id="panou-istoric"></div>
+  </div>
+
+  <script id="comenzi-config" type="application/json">{{orderConfig}}</script>
+  <script src="assets/js/panou.js?v={{vPanelJs}}"></script>
+</body>
+</html>
