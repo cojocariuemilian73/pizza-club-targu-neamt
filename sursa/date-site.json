@@ -102,7 +102,22 @@
     }
   },
   "extra": {
-    "activ": false
+    "activ": true,
+    "sectiuni": [
+      "specialitati"
+    ],
+    "specialitati": {
+      "titlu": "Specialități",
+      "text": "Pizza de la vitrină și pizza pentru livrare.",
+      "produse": [
+        "Pizza la felie",
+        "Pizza pentru livrare"
+      ],
+      "tente": {
+        "Pizza la felie": "#da947b",
+        "Pizza pentru livrare": "#ddbb82"
+      }
+    }
   },
   "locatii": [
     {

@@ -404,7 +404,7 @@ def theme_head():
     return out
 
 
-nav = (("meniu", "Meniu"), ("atelier", TEXT.get("navGalerie", "Poveste")), ("locatii", "Locații"), ("contact", "Contact"))
+nav = (("specialitati", "Specialități"), ("meniu", "Meniu"), ("atelier", TEXT.get("navGalerie", "Poveste")), ("locatii", "Locații"), ("contact", "Contact"))
 values = {
     "themeHead": theme_head(),
     "favicon": IMG + "favicon.png",

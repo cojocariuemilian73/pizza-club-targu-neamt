@@ -35,7 +35,7 @@ def build(data, esc, image, frame):
         illustration = ""
         if key in data["imagini"]:
             photo = f'<div class="special-photo">{image(key, sizes="(min-width: 900px) 46vw, 80vw")}</div>'
-            if data["imagini"][key].get("ilustrativa") and data.get("eticheteIlustrative", True):
+            if data["imagini"][key].get("ilustrativa"):
                 illustration = '<small class="special-caption">Imagine ilustrativă</small>'
         else:
             photo = f'<div class="special-photo is-type" aria-hidden="true"><span>{esc(product["nume"])}</span></div>'
@@ -67,6 +67,9 @@ def build(data, esc, image, frame):
         f'<div class="specials-dots" aria-hidden="true">{dots}</div>'
         '</div></div></div></section>'
     )
+
+    if set(extra.get("sectiuni", ())) == {"specialitati"}:
+        return {"afterMenu": specials}
 
     # --- Roata: 12 felii (fiecare premiu de două ori, față în față), becuri, cuie, ac și butuc ---
     wheel = extra["roata"]
